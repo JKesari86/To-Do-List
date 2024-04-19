@@ -28,6 +28,7 @@ function App() {
     <>
       <h1>Listado de tareas</h1>
       <input type="text" placeholder='¿Qué haremos hoy?' value={textoInput} onChange={manejadorDeEventoOnChange} onKeyDown={manejadorDeEventoOnKeyDown}/>
+      <div>
       <ul>
         {
           listadoDeTareas.map((tarea, index)=> {
@@ -35,6 +36,7 @@ function App() {
           })
         }
       </ul>
+      </div>
       <div>{listadoDeTareas.length} tareas</div>
     </>
   )

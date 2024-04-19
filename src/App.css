@@ -2,35 +2,25 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  width: 100%;
+  max-width: 300px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::placeholder {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -41,12 +31,25 @@
   color: #888;
 }
 
+ul {
+  width: 100%;
+  padding: 0;
+  align-items: center;
+
+}
+
 ul li{
   list-style: none;
+  border: 1px solid grey;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+
 }
 
 .Button {
   opacity: 0;
+  margin-right: auto;
 }
 
 .Button:hover {
