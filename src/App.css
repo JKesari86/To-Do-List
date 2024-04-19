@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+ul li{
+  list-style: none;
+}
+
+.Button {
+  opacity: 0;
+}
+
+.Button:hover {
+  opacity: 1;;
+}
+

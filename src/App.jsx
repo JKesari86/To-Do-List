@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+
 function App() {
   let [textoInput, actualizarTextoInput] = useState("");
   let [listadoDeTareas, actualizarListadoDeTareas] = useState([]);
+  
   function manejadorDeEventoOnChange(evento){
     actualizarTextoInput(evento.target.value);
   }
+
   function manejadorDeEventoOnKeyDown(evento){
     if(evento.key === "Enter"){
       let nuevoArray = Array.from(listadoDeTareas);
@@ -14,11 +17,13 @@ function App() {
       actualizarTextoInput("");
     }
   }
+
   function manejadorDeEventoOnClick(indice){
     let nuevoArray = Array.from(listadoDeTareas);
     nuevoArray.splice(indice, 1);
     actualizarListadoDeTareas(nuevoArray);
   }
+
   return (
     <>
       <h1>Listado de tareas</h1>
@@ -26,10 +31,11 @@ function App() {
       <ul>
         {
           listadoDeTareas.map((tarea, index)=> {
-            return <li key={index}>{tarea} <button onClick={()=> manejadorDeEventoOnClick(index)}>X</button></li>
+            return <li key={index}>{tarea} <button className="Button" onClick={()=> manejadorDeEventoOnClick(index)}>X</button></li>
           })
         }
       </ul>
+      <div>{listadoDeTareas.length} tareas</div>
     </>
   )
 }
