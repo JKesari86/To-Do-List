@@ -21,8 +21,8 @@ function App() {
   }
   return (
     <>
-      <h1>Listado tareas</h1>
-      <input type="text" value={textoInput} onChange={manejadorDeEventoOnChange} onKeyDown={manejadorDeEventoOnKeyDown}/>
+      <h1>Listado de tareas</h1>
+      <input type="text" placeholder='¿Qué haremos hoy?' value={textoInput} onChange={manejadorDeEventoOnChange} onKeyDown={manejadorDeEventoOnKeyDown}/>
       <ul>
         {
           listadoDeTareas.map((tarea, index)=> {
